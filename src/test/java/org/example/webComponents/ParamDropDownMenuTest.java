@@ -1,6 +1,7 @@
 package org.example.webComponents;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.junit4.DisplayName;
 import org.example.webComponents.MainPage;
 import org.junit.After;
 import org.junit.Assert;
@@ -39,6 +40,7 @@ public class ParamDropDownMenuTest {
     }
 
     @Test
+    @DisplayName("Проверка на совпадение текста в выподающем списке")
     public void checkDropDownMenuForText() {
         mainPage = new MainPage(driver);
         mainPage.clickToDropdownMenuAndSetAppearedText(parentText);

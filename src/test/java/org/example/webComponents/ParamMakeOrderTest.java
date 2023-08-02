@@ -2,6 +2,7 @@ package org.example.webComponents;
 
 import com.github.javafaker.Faker;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -77,6 +78,7 @@ public class ParamMakeOrderTest {
     }
 
     @Test
+    @DisplayName("Создание заказа")
     public void makeOrderTest() {
         makeOrder.makeFullOrder(orderButtonNumber, firstName, lastName, adress, metroStation, phoneNumber, timeToDelivery, day, comment);
     }
