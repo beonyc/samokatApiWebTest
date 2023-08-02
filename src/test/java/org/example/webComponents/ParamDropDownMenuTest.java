@@ -11,6 +11,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 @RunWith(Parameterized.class)
 public class ParamDropDownMenuTest {
@@ -26,8 +27,10 @@ public class ParamDropDownMenuTest {
 
     @Before
     public void setUp() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        //WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox", "--headless", "--disable-dev-shm-usage");
+        driver = new ChromeDriver(options);
         driver.get("http://qa-scooter.praktikum-services.ru/");
     }
 
@@ -47,9 +50,9 @@ public class ParamDropDownMenuTest {
         Assert.assertEquals(childText, mainPage.getChildText());
     }
 
-//    @After
-//    public void tearDown() {
-//        driver.quit();
-//    }
+    @After
+    public void tearDown() {
+        driver.quit();
+    }
 
 }

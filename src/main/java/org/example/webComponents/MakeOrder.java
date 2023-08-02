@@ -6,19 +6,19 @@ import java.util.List;
 
 public class MakeOrder {
     WebDriver driver;
-    private By orderButtonFirst = By.xpath(".//div[@class='Header_Nav__AGCXC']//*[text()='Заказать']");
-    private By orderButtonSecond = By.xpath(".//div[@class='Home_FinishButton__1_cWm']//*[text()='Заказать']");
-    private By firstName = By.xpath(".//*[@placeholder='* Имя']");
-    private By lastName = By.xpath(".//*[@placeholder='* Фамилия']");
-    private By adres = By.xpath(".//*[@placeholder='* Адрес: куда привезти заказ']");
-    private By metroStation = By.xpath(".//*[@placeholder='* Станция метро']");
-    private By phoneNumber = By.xpath(".//*[@placeholder='* Телефон: на него позвонит курьер']");
-    private By nextButton = By.xpath(".//button[text()='Далее']");
-    private By timeToDelivery = By.xpath(".//*[@placeholder='* Когда привезти самокат']");
-    private By rentDate = By.xpath(".//*[text()='* Срок аренды']");
-    private By color = By.id("black");
-    private By comment = By.xpath(".//*[@placeholder='Комментарий для курьера']");
-    private By finalOrderButton = By.xpath(".//*[@class='Button_Button__ra12g Button_Middle__1CSJM' and text()='Заказать']");
+    private final By orderButtonFirst = By.xpath(".//div[@class='Header_Nav__AGCXC']//*[text()='Заказать']");
+    private final By orderButtonSecond = By.xpath(".//div[@class='Home_FinishButton__1_cWm']//*[text()='Заказать']");
+    private final By firstName = By.xpath(".//*[@placeholder='* Имя']");
+    private final By lastName = By.xpath(".//*[@placeholder='* Фамилия']");
+    private final By adres = By.xpath(".//*[@placeholder='* Адрес: куда привезти заказ']");
+    private final By metroStation = By.xpath(".//*[@placeholder='* Станция метро']");
+    private final By phoneNumber = By.xpath(".//*[@placeholder='* Телефон: на него позвонит курьер']");
+    private final By nextButton = By.xpath(".//button[text()='Далее']");
+    private final By timeToDelivery = By.xpath(".//*[@placeholder='* Когда привезти самокат']");
+    private final By rentDate = By.xpath(".//*[text()='* Срок аренды']");
+    private final By color = By.id("black");
+    private final By comment = By.xpath(".//*[@placeholder='Комментарий для курьера']");
+    private final By finalOrderButton = By.xpath(".//*[@class='Button_Button__ra12g Button_Middle__1CSJM' and text()='Заказать']");
 
 
     public MakeOrder(WebDriver driver) {

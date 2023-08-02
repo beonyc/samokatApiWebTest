@@ -3,7 +3,7 @@ package org.example.webComponents;
 import org.openqa.selenium.*;
 
 public class MainPage {
-    private By droppedTextList = By.className("Home_FAQ__3uVm4");
+    private final By droppedTextList = By.className("Home_FAQ__3uVm4");
     private String childText;
 
     public String getChildText() {
